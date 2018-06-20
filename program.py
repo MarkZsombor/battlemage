@@ -1,3 +1,5 @@
+import random
+
 from creatures import Wizard, Creature
 
 def main():
@@ -19,15 +21,16 @@ def game_loop():
         Creature('Evil Wizard', 100)
     ]
 
-    print(creatures)
-
     hero = Wizard('Magic Mike', 75)
 
     while True:
 
+        active_creature = random.choice(creatures)
+        print('A {} of level {} has appeared in front of you'.format(active_creature.name, active_creature.level))
+
         cmd = input('Do you [a]ttack, [r]unaway, or [l]ook around?')
         if cmd == 'a':
-            print('a')
+            hero.attack(active_creature)
         elif cmd == 'r':
             print('r')
         elif cmd == 'l':
