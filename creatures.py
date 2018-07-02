@@ -27,10 +27,10 @@ class Wizard(Creature):
         print('{} rolled {}'.format(creature.name, creature_roll))
 
         if my_roll >= creature_roll:
-            print('The mage has defeated {}'.format(creature.name))
+            print('You have defeated {}'.format(creature.name))
             return True
         else:
-            print('You lost! Game over man!')
+            print('You lost! Get out of there!')
             return False
 
 
