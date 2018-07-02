@@ -47,6 +47,10 @@ def game_loop():
             print('Exiting Game')
             break
 
+        if not creatures:
+            print("You've done it! All your enemies have been vanquished!")
+            break
+
         print()
 
 
